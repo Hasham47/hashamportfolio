@@ -56,7 +56,8 @@ class _ContactMeState extends State<ContactMe> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: 20),
-                ContactMainContent()
+                ContactMainContent(),
+                
               ],
             ),
           ),

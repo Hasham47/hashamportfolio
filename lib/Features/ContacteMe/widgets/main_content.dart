@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/Features/ContacteMe/widgets/contact_form.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ContactMainContent extends StatelessWidget {
@@ -124,13 +125,13 @@ class ContactMainContent extends StatelessWidget {
                 children: [
                   _socialButton("assets/images/link.png",
                       () => _launchURL("https://www.linkedin.com/in/muhammad-hasham-khan-b46b18289/")),
-                  _socialButton("assets/images/github.png",
+                  _socialButton("assets/images/git.png",
                       () => _launchURL("https://github.com/Hasham47")),
                   _socialButton("assets/images/face.png",
                       () => _launchURL("https://www.facebook.com/share/1JjoHuCzqi/")),
                   _socialButton("assets/images/insta.png",
                       () => _launchURL("https://www.instagram.com/hasham9929?igsh=eDlkNnM4NXpkNm95")),
-                  _socialButton("assets/images/X.jpeg",
+                  _socialButton("assets/images/X.jpg",
                       () => _launchURL("https://x.com/DURRANImhk47")),
                   _socialButton("assets/images/whats.png",
                       () => _launchURL("https://wa.me/923336188148")),
@@ -171,6 +172,7 @@ class ContactMainContent extends StatelessWidget {
               ),
 
               const SizedBox(height: 80),
+              ContactForm()
             ],
           ),
         ),
@@ -180,9 +182,9 @@ class ContactMainContent extends StatelessWidget {
           bottom: 20,
           right: 20,
           child: FloatingActionButton(
-            backgroundColor: Colors.green,
+            backgroundColor: Colors.white,
             onPressed: () => _launchURL("https://wa.me/923336188148"),
-            child: const Icon(Icons.facebook, size: 32, color: Colors.white),
+            child: const Icon(Icons.phone, size: 32, color: Colors.green),
           ),
         ),
       ],
