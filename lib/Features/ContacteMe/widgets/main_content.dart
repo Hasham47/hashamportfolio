@@ -99,9 +99,9 @@ class ContactMainContent extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  _miniInfoCard("5+", "Years Exp."),
-                  _miniInfoCard("30+", "Projects"),
-                  _miniInfoCard("15+", "Happy Clients"),
+                  _miniInfoCard("2+", "Years Exp."),
+                  _miniInfoCard("12+", "Projects"),
+                  _miniInfoCard("4+", "Happy Clients"),
                 ],
               ),
 
@@ -123,16 +123,16 @@ class ContactMainContent extends StatelessWidget {
                 runSpacing: 12,
                 children: [
                   _socialButton("assets/images/link.png",
-                      () => _launchURL("https://linkedin.com")),
+                      () => _launchURL("https://www.linkedin.com/in/muhammad-hasham-khan-b46b18289/")),
                   _socialButton("assets/images/github.png",
-                      () => _launchURL("https://github.com")),
-                  _socialButton("assets/images/youtube.png",
-                      () => _launchURL("https://youtube.com")),
+                      () => _launchURL("https://github.com/Hasham47")),
+                  _socialButton("assets/images/face.png",
+                      () => _launchURL("https://www.facebook.com/share/1JjoHuCzqi/")),
                   _socialButton("assets/images/insta.png",
-                      () => _launchURL("https://instagram.com")),
-                  _socialButton("assets/images/twitter.png",
-                      () => _launchURL("https://twitter.com")),
-                  _socialButton("assets/images/whatsapp.png",
+                      () => _launchURL("https://www.instagram.com/hasham9929?igsh=eDlkNnM4NXpkNm95")),
+                  _socialButton("assets/images/X.jpeg",
+                      () => _launchURL("https://x.com/DURRANImhk47")),
+                  _socialButton("assets/images/whats.png",
                       () => _launchURL("https://wa.me/923336188148")),
                 ],
               ),
@@ -266,7 +266,7 @@ class ContactMainContent extends StatelessWidget {
       onTap: onTap,
       child: CircleAvatar(
         radius: 28,
-        backgroundColor: Colors.white.withOpacity(0.08),
+        backgroundColor: Colors.transparent,
         child: Padding(
           padding: const EdgeInsets.all(6),
           child: Image.asset(assetPath, fit: BoxFit.contain),
