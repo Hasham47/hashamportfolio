@@ -48,7 +48,7 @@ class BodyContent extends StatelessWidget {
           style: TextStyle(
             fontSize: 40,
             fontWeight: FontWeight.bold,
-            color: const Color.fromARGB(255, 151, 121, 220),
+            color: const Color.fromARGB(255, 67, 6, 210),
           ),
         ),
         const SizedBox(height: 20),
@@ -89,7 +89,7 @@ class BodyContent extends StatelessWidget {
           "I love turning ideas into reality through clean code.",
           style: TextStyle(
             fontSize: 30,
-            color: const Color.fromARGB(255, 32, 188, 205),
+            color: const Color.fromARGB(255, 247, 246, 246),
             height: 1.6,
           ),
         ),

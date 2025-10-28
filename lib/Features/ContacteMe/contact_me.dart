@@ -12,39 +12,12 @@ class _ContactMeState extends State<ContactMe> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.transparent, // make appbar see-through
-        flexibleSpace: Container(
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("assets/images/hmbg.jpg"), // 🔹 your appbar bg image
-              fit: BoxFit.cover,
-            ),
-          ),
-        ),
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios_new, color: Colors.white),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-        title: const Text(
-          "Back to Home",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        centerTitle: true,
-      ),
       body: Stack(
         children: [
           // 🔹 Background Image
           Positioned.fill(
             child: Image.asset(
-              "assets/images/hmbg.jpg", // 🔹 replace with your bg image
+              "assets/images/3647208.jpg", // 🔹 replace with your bg image
               fit: BoxFit.cover,
             ),
           ),

@@ -71,10 +71,10 @@ class ProjectsSection extends StatelessWidget {
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
+            crossAxisCount: 4,
             crossAxisSpacing: 20,
             mainAxisSpacing: 20,
-            childAspectRatio: 0.9,
+            childAspectRatio: 0.7,
           ),
           itemCount: projects.length,
           itemBuilder: (context, index) {
@@ -118,58 +118,89 @@ class _FuturisticProjectCardState extends State<_FuturisticProjectCard> {
         duration: const Duration(milliseconds: 300),
         curve: Curves.easeInOut,
         transform: isHovered
-            ? (Matrix4.identity()..scale(1.05))
+            ? (Matrix4.identity()..scale(1.06))
             : Matrix4.identity(),
         decoration: BoxDecoration(
-          color: Colors.grey[900],
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(30), // more rounded corners
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: isHovered
+                ? [
+                    Colors.cyanAccent.withOpacity(0.25),
+                    Colors.blueGrey.withOpacity(0.15),
+                  ]
+                : [
+                    Colors.grey.shade900.withOpacity(0.7),
+                    Colors.black.withOpacity(0.6),
+                  ],
+          ),
           boxShadow: [
             BoxShadow(
               color: isHovered
-                  ? Colors.cyanAccent.withOpacity(0.7)
-                  : Colors.cyanAccent.withOpacity(0.3),
-              blurRadius: isHovered ? 20 : 10,
-              spreadRadius: 1,
+                  ? Colors.cyanAccent.withOpacity(0.6)
+                  : Colors.cyanAccent.withOpacity(0.2),
+              blurRadius: isHovered ? 30 : 12,
+              spreadRadius: isHovered ? 2 : 0,
               offset: const Offset(0, 6),
             ),
           ],
+          border: Border.all(
+            color: isHovered
+                ? Colors.cyanAccent.withOpacity(0.7)
+                : Colors.cyanAccent.withOpacity(0.2),
+            width: 1.5,
+          ),
         ),
         child: Column(
           children: [
-            Expanded(
-              child: ClipRRect(
-                borderRadius:
-                    const BorderRadius.vertical(top: Radius.circular(20)),
-                child: Image.asset(
-                  widget.imagePath,
-                  height: 400,
-                  width: double.infinity,
-                  fit: BoxFit.cover,
-                ),
+            ClipRRect(
+              borderRadius:
+                  const BorderRadius.vertical(top: Radius.circular(30)),
+              child: Image.asset(
+                widget.imagePath,
+                height: 360, // smaller height
+                width: double.infinity,
+                fit: BoxFit.cover,
               ),
             ),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.all(12.0),
+                padding: const EdgeInsets.all(14.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       widget.title,
                       style: const TextStyle(
-                        fontSize: 16,
+                        fontSize: 17,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
+                        letterSpacing: 0.8,
                       ),
                     ),
-                    const SizedBox(height: 8),
+                    const SizedBox(height: 6),
                     Expanded(
                       child: Text(
                         widget.desc,
-                        style: const TextStyle(
-                            fontSize: 13, color: Colors.white70),
+                        style: TextStyle(
+                          fontSize: 13,
+                          color: Colors.white.withOpacity(0.8),
+                        ),
                         maxLines: 3,
                         overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                    AnimatedOpacity(
+                      duration: const Duration(milliseconds: 300),
+                      opacity: isHovered ? 1 : 0,
+                      child: Align(
+                        alignment: Alignment.bottomRight,
+                        child: Icon(
+                          Icons.arrow_forward_rounded,
+                          color: Colors.cyanAccent.withOpacity(0.9),
+                          size: 22,
+                        ),
                       ),
                     ),
                   ],

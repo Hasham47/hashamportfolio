@@ -19,7 +19,7 @@ class _AboutState extends State<About> {
             child: Opacity(
               opacity: 0.9 , // make it light so content is visible
               child: Image.asset(
-                "assets/images/hmbg.jpg", // <-- replace with your imagehmbg.jpg 
+                "assets/images/3647208.jpg", // <-- replace with your imagehmbg.jpg 
                 fit: BoxFit.cover,
               ),
               // OR if using SVG:
@@ -32,8 +32,7 @@ class _AboutState extends State<About> {
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                TopRowWidget(),
+              children: [ 
                 const SizedBox(height: 30),
                 AboutMe(),
                 

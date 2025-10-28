@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/Features/home/widgets/body_content.dart';
 import 'package:portfolio/Features/home/widgets/project.dart';
 import 'package:portfolio/Features/home/widgets/skills_card.dart';
-import 'package:portfolio/Features/home/widgets/skillspage.dart';
 import 'package:portfolio/Features/home/widgets/top_row_widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -20,7 +19,7 @@ class HomeScreen extends StatelessWidget {
             child: Opacity(
               opacity: 0.9 , // make it light so content is visible
               child: Image.asset(
-                "assets/images/hmbg.jpg", // <-- replace with your imagehmbg.jpg 
+                "assets/images/3647208.jpg", // <-- replace with your imagehmbg.jpg 
                 fit: BoxFit.cover,
               ),
               // OR if using SVG:
@@ -34,13 +33,10 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                TopRowWidget(),
                 const SizedBox(height: 30),
                 BodyContent(),
                 const SizedBox(height: 40),
-                SkillsCard(),
-                const SizedBox(height: 40),
-                SkillsPage(),
+                SkillsCard(),          
                const SizedBox(height: 40),
                 ProjectsSection(),
                const SizedBox(height: 40),

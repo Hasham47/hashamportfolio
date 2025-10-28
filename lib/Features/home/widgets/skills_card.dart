@@ -97,7 +97,7 @@ class SkillItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 399,
+      width: 300,
       height: 322,
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
